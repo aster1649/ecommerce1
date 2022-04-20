@@ -21,6 +21,3 @@ Route::get('/product/register',[productcontroller::class,'register'])->name('pro
 //Route::get('/product/register',[productcontroller::class,'register'])->name('product/register');
 Route::post('/product/register',[productcontroller::class,'store']);
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
