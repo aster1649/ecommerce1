@@ -13,8 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        //schema:: ceate("product",function,Blueprint,$table()
-        //schema:: create("product";Bluprint $ model(),)$table id();  }
+        Schema::create('products', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table-> string('unit')->nullabl();
+            $table->double('price',82)->nullable();
+            $table->integer('quantity')->nullable();
+            $table->timestamps();
+        });
+    }
 
     /**
      * Reverse the migrations.
@@ -23,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('products');
     }
 };
