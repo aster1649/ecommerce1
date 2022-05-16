@@ -14,4 +14,8 @@ class product extends Model
         'price',
         'quantity'
        ];
+    Public function catagories()
+    {
+        return $this ->beloongsTo(catagories::class);
+    }
 }

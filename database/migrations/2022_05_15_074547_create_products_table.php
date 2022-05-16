@@ -20,6 +20,7 @@ return new class extends Migration
             $table->double('price',82)->nullable();
             $table->integer('quantity')->nullable();
             $table->timestamps();
+            $table->unsignedBigIntger('catagory_id')->foreign('catagory_id')->references('id')->on('catagories')->OnDelete('casecad');
         });
     }
 
